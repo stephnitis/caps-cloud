@@ -37,7 +37,7 @@ async function confirmDelivery(data){
 }
 
 const app = Consumer.create({
-  queueUrl: 'arn:aws:sns:us-west-2:913662206055:pickup.fifo',
+  queueUrl: 'https://sqs.us-west-2.amazonaws.com/913662206055/packages.fifo',
   handleMessage: confirmDelivery,
 });
 
