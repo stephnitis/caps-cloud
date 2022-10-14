@@ -21,7 +21,7 @@ sns.publish(payload).promise()
   .catch(err => console.log(err));
 
 const app = Consumer.create({
-  queueURL: 'arn:aws:sqs:us-west-2:913662206055:vendor',
+  queueURL: 'https://sqs.us-west-2.amazonaws.com/913662206055/packages.fifo',
   handleMessage: (data) => {
     let body = JSON.parse(data.Body);
     console.log('message Received: ', body);
