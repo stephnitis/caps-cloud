@@ -10,7 +10,7 @@ const chance = new Chance();
 const sns = new AWS.SNS();
 
 const topic = 'arn:aws:sns:us-west-2:913662206055:pickup.fifo';
-const queueUrl = 'https://sqs.us-west-2.amazonaws.com/913662206055/flowers';
+const queueUrl = 'https://sqs.us-west-2.amazonaws.com/913662206055/widgets';
 
 let orderDetails = {
   orderId: chance.guid(),
@@ -23,7 +23,7 @@ let messageString = JSON.stringify(orderDetails);
 const payload = {
   Message: messageString,
   TopicArn: topic,
-  MessageGroupId: 'flowerVendors',
+  MessageGroupId: 'widgetsVendors',
   MessageDeduplicationId: chance.guid(),
 };
 
