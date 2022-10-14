@@ -4,6 +4,7 @@
     "chance": "^1.1.8",
     "eslint": "^8.25.0",
     "init": "^0.1.2",
-    "sqs-consumer": "^5.7.0"
+    "sqs-consumer": "^5.7.0",
+    "sqs-producer": "^2.1.0"
   }
 }
